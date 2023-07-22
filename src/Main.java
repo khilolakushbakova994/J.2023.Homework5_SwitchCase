@@ -62,8 +62,12 @@ public class Main {
 
 
         int year = 2021;
-        if (year % 4 == 0 && year % 400 == 0 && year % 100 != 0) {
-            System.out.println(year + " год является високосным");
+        boolean isyear4 = year % 4 == 0;
+        boolean isyear400 = year % 400 == 0;
+        boolean isyear100 = year % 100 == 0;
+        boolean isYearLeap = isyear4 || isyear400;
+        if (isYearLeap){
+            System.out.println(year + " год является високосным\n");
         } else {
             System.out.println(year + " год не является високосным\n");
 
