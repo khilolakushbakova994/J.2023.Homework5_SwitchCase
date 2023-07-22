@@ -67,12 +67,13 @@ public class Main {
         boolean isYear100 = year % 100 == 0;
         boolean isYear400 = year % 400 == 0;
         boolean isLeap = isYear4 || isYear400;
-        if (isYear400 || (isYear4 && !isYear100)) {
-            System.out.println(year + " год является високосным");
+        if (isLeap){
+            System.out.println(year + " год является високосным\n");
         } else {
-            System.out.println(year + " год не является високосным");
+            System.out.println(year + " год не является високосным\n");
         }
     }
+
 
     public static void task4() {
         System.out.println("Задание 4");
